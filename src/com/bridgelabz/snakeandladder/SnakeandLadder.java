@@ -8,12 +8,13 @@ public class SnakeandLadder {
 	public static final int SNAKE=2;
 	public static final int START=0;
 	public static final int FINISH=100;
-	
-	
+
+
 	public static void main(String args[]) {
 		
 		System.out.println("------------Welcome to SnakeandLadder Problem------------");
 		
+		//variables
 		int currPos=0,diceVal=0,option=0;
 		
 		currPos=START;
@@ -25,6 +26,7 @@ public class SnakeandLadder {
 		if(currPos<0) {
 			currPos=START;
 		}
+
 		//for dice roll
 		diceVal= (int) ((Math.random() * (MAXVAL - MINVAL)) + MINVAL);
 		
@@ -42,18 +44,14 @@ public class SnakeandLadder {
 		case NO_PLAY:
 			break;
 		
-		}
+			}
 		
+
 		}
 		
 		
 		System.out.println("Reached final position :"+currPos);
-		
-		
-		
-		
-		
-		
+
 		
 	}
 	
