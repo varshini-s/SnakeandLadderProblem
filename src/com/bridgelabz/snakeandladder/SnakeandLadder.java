@@ -22,29 +22,29 @@ public class SnakeandLadder {
 		while(currPos!=FINISH) {
 			System.out.println(currPos);
 			
-		//To restart from start position
-		if(currPos<0) {
-			currPos=START;
-		}
-
-		//for dice roll
-		diceVal= (int) ((Math.random() * (MAXVAL - MINVAL)) + MINVAL);
-		
-		//for the options
-		option=(int)Math.floor(Math.random()*100)%3;
-		
-		switch(option) {
-		
-		case LADDER:
-			currPos+=diceVal;
-			break;
-		case SNAKE:
-			currPos-=diceVal;
-			break;
-		case NO_PLAY:
-			break;
-		
+			//To restart from start position
+			if(currPos<0) {
+				currPos=START;
 			}
+	
+			//for dice roll
+			diceVal= (int) ((Math.random() * (MAXVAL - MINVAL)) + MINVAL);
+			
+			//for the options
+			option=(int)Math.floor(Math.random()*100)%3;
+			
+			switch(option) {
+			
+				case LADDER:
+					currPos+=diceVal;
+					break;
+				case SNAKE:
+					currPos-=diceVal;
+					break;
+				case NO_PLAY:
+					break;
+			
+				}
 		
 
 		}
