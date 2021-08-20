@@ -6,6 +6,8 @@ public class SnakeandLadder {
 		
 		System.out.println("------------Welcome to SnakeandLadder Problem------------");
 		
+		int currPos=0;
+		
 	}
 	
 
