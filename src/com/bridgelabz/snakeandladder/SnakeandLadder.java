@@ -9,8 +9,11 @@ public class SnakeandLadder {
 		
 		System.out.println("------------Welcome to SnakeandLadder Problem------------");
 		
-		int startPos=0;
-		System.out.println("Starting postion is:"+startPos);
+		int startPos=0,diceVal=0;
+		
+		diceVal= (int) ((Math.random() * (maxVal - minVal)) + minVal);
+		
+		System.out.println("The dice roll value is "+diceVal);
 		
 		
 		
