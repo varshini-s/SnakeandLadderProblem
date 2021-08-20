@@ -20,12 +20,10 @@ public class SnakeandLadder {
 		currPos=START;
 		
 		while(currPos!=FINISH) {
+			
+			
 			System.out.println(currPos);
 			
-			//To restart from start position
-			if(currPos<0) {
-				currPos=START;
-			}
 	
 			//for dice roll
 			diceVal= (int) ((Math.random() * (MAXVAL - MINVAL)) + MINVAL);
@@ -45,6 +43,15 @@ public class SnakeandLadder {
 					break;
 			
 				}
+			
+			//To handle the case of greater than 100
+			if(currPos>100) {
+				currPos-=diceVal;
+			}
+			//To restart from start position
+			else if(currPos<0) {
+				currPos=START;
+			}
 		
 
 		}
