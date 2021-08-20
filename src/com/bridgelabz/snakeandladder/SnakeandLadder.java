@@ -15,18 +15,17 @@ public class SnakeandLadder {
 		System.out.println("------------Welcome to SnakeandLadder Problem------------");
 		
 		//variables
-		int currPos=0,diceVal=0,option=0;
+		int currPos=0,diceVal=0,option=0,countDiceRoll=0;
 		
 		currPos=START;
 		
 		while(currPos!=FINISH) {
 			
-			
-			System.out.println(currPos);
-			
-	
+		
 			//for dice roll
 			diceVal= (int) ((Math.random() * (MAXVAL - MINVAL)) + MINVAL);
+			
+			countDiceRoll++;
 			
 			//for the options
 			option=(int)Math.floor(Math.random()*100)%3;
@@ -52,11 +51,14 @@ public class SnakeandLadder {
 			else if(currPos<0) {
 				currPos=START;
 			}
+			
+			//To print current position
+			System.out.println(currPos);
 		
 
 		}
 		
-		
+		System.out.println("Number of times dice rolled: "+countDiceRoll);
 		System.out.println("Reached final position :"+currPos);
 
 		
