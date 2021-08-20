@@ -1,19 +1,41 @@
 package com.bridgelabz.snakeandladder;
 
 public class SnakeandLadder {
-	public static final int maxVal=7;
-	public static final int minVal=1;
+	public static final int MAXVAL=7;
+	public static final int MINVAL=1;
+	public static final int NO_PLAY=0;
+	public static final int LADDER=1;
+	public static final int SNAKE=2;
 	
 	
 	public static void main(String args[]) {
 		
 		System.out.println("------------Welcome to SnakeandLadder Problem------------");
 		
-		int startPos=0,diceVal=0;
+		int startPos=0,currPos=0,diceVal=0,option=0;
 		
-		diceVal= (int) ((Math.random() * (maxVal - minVal)) + minVal);
+		//for dice roll
+		diceVal= (int) ((Math.random() * (MAXVAL - MINVAL)) + MINVAL);
 		
-		System.out.println("The dice roll value is "+diceVal);
+		//for the options
+		option=(int)Math.floor(Math.random()*100)%3;
+		
+		switch(option) {
+		
+		case LADDER:
+			currPos+=diceVal;
+			break;
+		case SNAKE:
+			currPos-=diceVal;
+			break;
+		case NO_PLAY:
+			break;
+		
+		}
+		
+		System.out.println("Current position is :"+currPos);
+		
+		
 		
 		
 		
